@@ -1,0 +1,7 @@
+# robots.txt for Sparkle RFID Showroom Systems
+User-agent: *
+Allow: /
+
+# Host & Sitemap Location
+Host: https://www.sparklerfid.com
+Sitemap: https://www.sparklerfid.com/sitemap.xml

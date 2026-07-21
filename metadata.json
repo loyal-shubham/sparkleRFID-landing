@@ -1,0 +1,6 @@
+{
+  "name": "Sparkle RFID",
+  "description": "Premium luxury jewelry and high-value asset RFID tracking systems. Precision engineering, intelligent security, and real-time inventory visibility.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

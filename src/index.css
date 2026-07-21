@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-zebrasans: "Arial", sans-serif;
+  --font-zebramono: "Arial", sans-serif;
+  --font-lato: "Arial", sans-serif;
+
+  --font-sans: "Arial", sans-serif;
+  --font-display: "Arial", sans-serif;
+  --font-mono: "Arial", monospace;
+  
+  --font-body: "Arial", sans-serif;
+  --font-heading: "Arial", sans-serif;
+
+  /* Primary Colors */
+  --color-primary-violet: #D91CFF;
+  --color-primary-gold: #D4A34A;
+  --color-primary-white: #FFFFFF;
+
+  /* Secondary Colors */
+  --color-secondary-graphite: #1E1E1E;
+  --color-secondary-steel: #555555;
+  --color-secondary-cloud: #D9D9D9;
+  --color-secondary-gold: #B98A32;
+
+  /* Backward Compatibility Mappings */
+  --color-carbon-violet: #D91CFF;
+  --color-rfid-gold: #D4A34A;
+  --color-steel-grey: #555555;
+  --color-cloud-grey: #D9D9D9;
+  --color-signal-gold: #B98A32;
+  --color-graphite: #1E1E1E;
+}
+
+/* Custom animated backgrounds and subtle gradients */
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(212, 163, 74, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(212, 163, 74, 0.05) 1px, transparent 1px);
+  }
+  .bg-scanner-grid {
+    background-size: 50px 50px;
+    background-image: 
+      linear-gradient(to right, rgba(217, 28, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(217, 28, 255, 0.04) 1px, transparent 1px);
+  }
+  .text-glow-gold {
+    text-shadow: 0 0 10px rgba(212, 163, 74, 0.4), 0 0 20px rgba(212, 163, 74, 0.2);
+  }
+  .text-glow-violet {
+    text-shadow: 0 0 10px rgba(217, 28, 255, 0.5), 0 0 20px rgba(217, 28, 255, 0.2);
+  }
+  .shadow-glow-violet {
+    box-shadow: 0 0 15px rgba(217, 28, 255, 0.25), inset 0 0 10px rgba(217, 28, 255, 0.1);
+  }
+  .shadow-glow-gold {
+    box-shadow: 0 0 15px rgba(212, 163, 74, 0.25), inset 0 0 10px rgba(212, 163, 74, 0.1);
+  }
+  .border-glow-violet-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .border-glow-violet-hover:hover {
+    border-color: #D91CFF;
+    box-shadow: 0 0 20px rgba(217, 28, 255, 0.2);
+  }
+  .border-glow-gold-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .border-glow-gold-hover:hover {
+    border-color: #D4A34A;
+    box-shadow: 0 0 20px rgba(212, 163, 74, 0.2);
+  }
+}
+
