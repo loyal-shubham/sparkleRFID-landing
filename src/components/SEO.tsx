@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 interface SEOProps {
   title: string;
@@ -29,14 +30,13 @@ export const SEO: React.FC<SEOProps> = ({
       windowWithGtag.gtag("event", "page_view", {
         page_title: title,
         page_path: path,
-        send_to: "G-XXXXXXXXXX"
+        send_to: "G-ZPM0WPY04K"
       });
     }
   }, [title, routePath]);
 
   return (
-    <>
-      {/* React 19 automatically hoists title, meta, and link tags from here directly to the document head */}
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -53,6 +53,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-    </>
+    </Helmet>
   );
 };

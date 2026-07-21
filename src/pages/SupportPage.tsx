@@ -47,7 +47,7 @@ export const SupportPage: React.FC<SupportPageProps> = ({ theme = "dark" }) => {
   ];
 
   return (
-    <div className="pt-24 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
+    <div className="pt-28 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
       <SEO 
         title="Sparkle RFID | Client Support & Resource Portal" 
         description="Access technical user manuals, download scanner drivers, search hardware troubleshooting guides, and open support tickets."
@@ -180,7 +180,7 @@ export const SupportPage: React.FC<SupportPageProps> = ({ theme = "dark" }) => {
                 ) : (
                   <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-6">
                     <div className="space-y-1">
-                      <span className="text-[10px] font-mono text-[#D4A34A] uppercase tracking-widest font-black block">SECURE DESK</span>
+                      <span className="text-[10px] font-display text-[#D4A34A] uppercase tracking-widest font-black block">SECURE DESK</span>
                       <h3 className={`text-2xl font-display font-black tracking-wide ${isDark ? "text-white" : "text-zinc-950"}`}>
                         Open Ticket
                       </h3>

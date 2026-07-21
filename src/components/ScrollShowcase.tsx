@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
+import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "motion/react";
 import { SleekScannerGun } from "./SleekScannerGun";
 import { SVGProductGraphic } from "./SVGProductGraphic";
 import {
@@ -22,9 +22,16 @@ export const ScrollShowcase: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Scroll tracking from Framer Motion
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress: rawScrollProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
+  });
+
+  // Smooth scroll progress using spring physics for inertia
+  const scrollYProgress = useSpring(rawScrollProgress, {
+    stiffness: 45,
+    damping: 25,
+    restDelta: 0.001
   });
 
   // Keep track of mouse movement to simulate a floating 3D tilt
@@ -130,7 +137,7 @@ export const ScrollShowcase: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-[220vh] bg-zinc-950 border-b border-zinc-900"
+      className="relative w-full h-[400vh] bg-zinc-950 border-b border-zinc-900"
       id="scroll-journey"
     >
       {/* Sticky container that remains pinned while text content scrolls */}

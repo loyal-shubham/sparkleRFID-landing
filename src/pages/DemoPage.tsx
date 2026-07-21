@@ -35,7 +35,7 @@ export const DemoPage: React.FC<DemoPageProps> = ({ theme = "dark" }) => {
   };
 
   return (
-    <div className="pt-24 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
+    <div className="pt-28 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
       <SEO 
         title="Sparkle RFID | Schedule a Live ERP Software Demo" 
         description="Book a technical demo of our luxury asset tracking dashboard. Pick date and time slots for live hardware calibrations."

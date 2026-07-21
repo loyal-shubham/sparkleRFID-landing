@@ -83,7 +83,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ theme = "dark" }) => {
         ) : (
           <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-6">
             <div className="text-center md:text-left space-y-1">
-              <span className="text-[10px] font-mono text-[#D4A34A] uppercase tracking-widest font-black block">SECURE CHANNELS</span>
+              <span className="text-[10px] font-display text-[#D4A34A] uppercase tracking-widest font-black block">SECURE CHANNELS</span>
               <h3 className={`text-2xl font-display font-black tracking-wide ${isDark ? "text-white" : "text-zinc-950"}`}>Request Custom Design or Direct Quote</h3>
               <p className={`text-xs md:text-sm max-w-2xl font-medium ${isDark ? "text-zinc-400" : "text-zinc-650"}`}>
                 Whether you need single scanners to secure an independent jewelry boutique or a comprehensive multi-facility showroom calibration with custom ERP integrations, write us here.

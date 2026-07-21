@@ -20,7 +20,7 @@ export const SoftwarePage: React.FC<SoftwarePageProps> = ({ theme = "dark" }) =>
   ];
 
   return (
-    <div className="pt-24 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
+    <div className="pt-28 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
       <SEO 
         title="Sparkle RFID | Sparkle ERP Showroom Software Solutions" 
         description="Explore the unified Sparkle ERP retail database. Track diamond inventory audits, manage anti-theft gate sensors, and access SDKs."

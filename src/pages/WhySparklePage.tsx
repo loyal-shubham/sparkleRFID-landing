@@ -11,7 +11,7 @@ export const WhySparklePage: React.FC<WhySparklePageProps> = ({ theme = "dark" }
   const isDark = theme === "dark";
 
   return (
-    <div className="pt-24 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
+    <div className="pt-28 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
       <SEO 
         title="Sparkle RFID | The Luxury Showroom Advantage" 
         description="Learn how Sparkle solves gold-interference challenges, cuts annual showroom stock shrinkage, and accelerates inventory times."

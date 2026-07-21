@@ -11,9 +11,9 @@ interface HeaderProps {
   onToggleTheme: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ 
-  cartCount, 
-  onOpenCart, 
+export const Header: React.FC<HeaderProps> = ({
+  cartCount,
+  onOpenCart,
   onOpenConsultant,
   theme,
   onToggleTheme
@@ -23,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({
   // In light theme (isDark === false), the navbar is dark charcoal.
   // In dark theme (isDark === true), the navbar is clean light white.
   const isDarkNavbar = !isDark;
-  
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHardwareOpen, setIsHardwareOpen] = useState(false);
   const [isSoftwareOpen, setIsSoftwareOpen] = useState(false);
@@ -44,22 +44,20 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* 2. MAIN NAVIGATION DOCK (Inversed Layout) */}
-      <div className={`transition-colors duration-300 border-b backdrop-blur-md relative z-40 ${
-        isDarkNavbar ? "bg-zinc-950/95 border-zinc-900 text-zinc-100" : "bg-white/95 border-zinc-200 text-zinc-900"
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative z-45">
-          
+      <div className={`transition-colors duration-300 border-b backdrop-blur-md relative z-40 ${isDarkNavbar ? "bg-zinc-950/95 border-zinc-900 text-zinc-100" : "bg-white/95 border-zinc-200 text-zinc-900"
+        }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative z-45">
+
           {/* Sparkle Brand Logo */}
           <a href="#/" className="flex items-center gap-1 group">
             <SparkleLogo variant={isDarkNavbar ? "dark" : "light"} size={48} />
           </a>
 
           {/* Navigation Links (Desktop) */}
-          <nav className={`hidden md:flex items-center gap-8 text-sm font-sans font-medium tracking-wide relative z-50 transition-colors ${
-            isDarkNavbar ? "text-zinc-300" : "text-zinc-600"
-          }`}>
+          <nav className={`hidden md:flex items-center gap-8 text-sm font-sans font-medium tracking-wide relative z-50 transition-colors ${isDarkNavbar ? "text-zinc-300" : "text-zinc-600"
+            }`}>
             {/* Hardware Dropdown Nav */}
-            <div 
+            <div
               className="relative py-5 cursor-pointer group"
               onMouseEnter={() => setIsHardwareOpen(true)}
               onMouseLeave={() => setIsHardwareOpen(false)}
@@ -74,13 +72,11 @@ export const Header: React.FC<HeaderProps> = ({
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.15 }}
-                    className={`absolute top-full left-0 mt-0 w-52 rounded-xl border p-4 shadow-2xl space-y-2.5 z-50 ${
-                      isDarkNavbar ? "bg-zinc-950 border-zinc-850 text-zinc-400" : "bg-white border-zinc-200 text-zinc-600"
-                    }`}
+                    className={`absolute top-full left-0 mt-0 w-52 rounded-xl border p-4 shadow-2xl space-y-2.5 z-50 ${isDarkNavbar ? "bg-zinc-950 border-zinc-850 text-zinc-400" : "bg-white border-zinc-200 text-zinc-600"
+                      }`}
                   >
-                    <span className={`block font-mono text-[7px] tracking-widest uppercase border-b pb-1 mb-2 ${
-                      isDarkNavbar ? "text-zinc-600 border-zinc-900" : "text-zinc-400 border-zinc-150"
-                    }`}>Product Categories</span>
+                    <span className={`block font-mono text-[7px] tracking-widest uppercase border-b pb-1 mb-2 ${isDarkNavbar ? "text-zinc-600 border-zinc-900" : "text-zinc-400 border-zinc-150"
+                      }`}>Product Categories</span>
                     <a href="#/hardware?category=scanners" className="block hover:text-[#D4A34A] transition-colors text-xs font-medium font-sans">RFID Scanners</a>
                     <a href="#/hardware?category=smart-trays" className="block hover:text-[#D4A34A] transition-colors text-xs font-medium font-sans">Smart Velvet Trays</a>
                     <a href="#/hardware?category=eas-gates" className="block hover:text-[#D4A34A] transition-colors text-xs font-medium font-sans">EAS Shield Gates</a>
@@ -92,7 +88,7 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
 
             {/* Software Dropdown Nav */}
-            <div 
+            <div
               className="relative py-5 cursor-pointer group"
               onMouseEnter={() => setIsSoftwareOpen(true)}
               onMouseLeave={() => setIsSoftwareOpen(false)}
@@ -107,13 +103,11 @@ export const Header: React.FC<HeaderProps> = ({
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.15 }}
-                    className={`absolute top-full left-0 mt-0 w-52 rounded-xl border p-4 shadow-2xl space-y-2.5 z-50 ${
-                      isDarkNavbar ? "bg-zinc-950 border-zinc-850 text-zinc-400" : "bg-white border-zinc-200 text-zinc-600"
-                    }`}
+                    className={`absolute top-full left-0 mt-0 w-52 rounded-xl border p-4 shadow-2xl space-y-2.5 z-50 ${isDarkNavbar ? "bg-zinc-950 border-zinc-850 text-zinc-400" : "bg-white border-zinc-200 text-zinc-600"
+                      }`}
                   >
-                    <span className={`block font-mono text-[7px] tracking-widest uppercase border-b pb-1 mb-2 ${
-                      isDarkNavbar ? "text-zinc-600 border-zinc-900" : "text-zinc-400 border-zinc-150"
-                    }`}>Operations Core</span>
+                    <span className={`block font-mono text-[7px] tracking-widest uppercase border-b pb-1 mb-2 ${isDarkNavbar ? "text-zinc-600 border-zinc-900" : "text-zinc-400 border-zinc-150"
+                      }`}>Operations Core</span>
                     <a href="#/software" className="block hover:text-[#D4A34A] transition-colors text-xs font-medium font-sans">Sparkle ERP Software</a>
                   </motion.div>
                 )}
@@ -140,11 +134,10 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Theme Toggle Button */}
             <button
               onClick={onToggleTheme}
-              className={`w-9 h-9 rounded-lg border flex items-center justify-center transition-all cursor-pointer group ${
-                isDarkNavbar 
-                  ? "bg-zinc-900 border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-800" 
+              className={`w-9 h-9 rounded-lg border flex items-center justify-center transition-all cursor-pointer group ${isDarkNavbar
+                  ? "bg-zinc-900 border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-800"
                   : "bg-zinc-100 border-zinc-200 text-zinc-600 hover:text-zinc-955 hover:bg-zinc-200"
-              }`}
+                }`}
               title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
             >
               {isDark ? (
@@ -157,11 +150,10 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Commerce Cart button */}
             <button
               onClick={onOpenCart}
-              className={`relative w-9 h-9 rounded-lg border flex items-center justify-center transition-all cursor-pointer group ${
-                isDarkNavbar
+              className={`relative w-9 h-9 rounded-lg border flex items-center justify-center transition-all cursor-pointer group ${isDarkNavbar
                   ? "bg-zinc-900 border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 text-zinc-300"
                   : "bg-zinc-100 border-zinc-200 hover:bg-zinc-200 hover:border-zinc-300 text-zinc-600"
-              }`}
+                }`}
             >
               <ShoppingBag className="w-4 h-4 transition-colors text-current" />
               {cartCount > 0 && (
@@ -174,11 +166,10 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mobile Menu Button (Hamburger) */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`md:hidden w-9 h-9 rounded-lg border flex items-center justify-center transition-all cursor-pointer group ${
-                isDarkNavbar
+              className={`md:hidden w-9 h-9 rounded-lg border flex items-center justify-center transition-all cursor-pointer group ${isDarkNavbar
                   ? "bg-zinc-900 border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-800"
                   : "bg-zinc-100 border-zinc-200 text-zinc-600 hover:text-zinc-955 hover:bg-zinc-200"
-              }`}
+                }`}
               title="Toggle Menu"
             >
               {isMenuOpen ? (
@@ -199,27 +190,24 @@ export const Header: React.FC<HeaderProps> = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className={`absolute top-[100px] left-0 right-0 w-full border-b shadow-2xl z-30 p-6 flex flex-col gap-4 md:hidden max-h-[80vh] overflow-y-auto ${
-              isDarkNavbar ? "bg-zinc-950/98 border-zinc-800 text-zinc-100" : "bg-white/98 border-zinc-200 text-zinc-900"
-            }`}
+            className={`absolute top-[116px] left-0 right-0 w-full border-b shadow-2xl z-30 p-6 flex flex-col gap-4 md:hidden max-h-[80vh] overflow-y-auto ${isDarkNavbar ? "bg-zinc-950/98 border-zinc-800 text-zinc-100" : "bg-white/98 border-zinc-200 text-zinc-900"
+              }`}
           >
             <div className="flex flex-col gap-3.5 text-sm font-sans font-medium tracking-wide">
               {/* Mobile Hardware link block */}
               <div>
                 <button
                   onClick={() => setMobileHardwareExpanded(!mobileHardwareExpanded)}
-                  className={`w-full py-2 border-b flex justify-between items-center text-left ${
-                    isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
-                  }`}
+                  className={`w-full py-2 border-b flex justify-between items-center text-left ${isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
+                    }`}
                 >
                   <span>Hardware Suite</span>
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${mobileHardwareExpanded ? "rotate-180" : ""}`} />
                 </button>
-                
+
                 {mobileHardwareExpanded && (
-                  <div className={`pl-4 py-2 flex flex-col gap-2.5 text-xs border-l mt-1 ${
-                    isDarkNavbar ? "border-zinc-800/20 text-zinc-400" : "border-zinc-200 text-zinc-650"
-                  }`}>
+                  <div className={`pl-4 py-2 flex flex-col gap-2.5 text-xs border-l mt-1 ${isDarkNavbar ? "border-zinc-800/20 text-zinc-400" : "border-zinc-200 text-zinc-650"
+                    }`}>
                     <a href="#/hardware?category=scanners" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4A34A] transition-colors">RFID Scanner</a>
                     <a href="#/hardware?category=smart-trays" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4A34A] transition-colors">Smart Tray</a>
                     <a href="#/hardware?category=eas-gates" onClick={() => setIsMenuOpen(false)} className="hover:text-[#D4A34A] transition-colors">EAS Gates</a>
@@ -233,9 +221,8 @@ export const Header: React.FC<HeaderProps> = ({
               <a
                 href="#/software"
                 onClick={() => setIsMenuOpen(false)}
-                className={`transition-colors py-2 border-b hover:text-[#D4A34A] ${
-                  isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
-                }`}
+                className={`transition-colors py-2 border-b hover:text-[#D4A34A] ${isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
+                  }`}
               >
                 Sparkle ERP Software
               </a>
@@ -244,9 +231,8 @@ export const Header: React.FC<HeaderProps> = ({
               <a
                 href="#/support"
                 onClick={() => setIsMenuOpen(false)}
-                className={`transition-colors py-2 border-b hover:text-[#D4A34A] ${
-                  isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
-                }`}
+                className={`transition-colors py-2 border-b hover:text-[#D4A34A] ${isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
+                  }`}
               >
                 Support Portal
               </a>
@@ -255,9 +241,8 @@ export const Header: React.FC<HeaderProps> = ({
               <a
                 href="#/demo"
                 onClick={() => setIsMenuOpen(false)}
-                className={`transition-colors py-2 border-b hover:text-[#D4A34A] ${
-                  isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
-                }`}
+                className={`transition-colors py-2 border-b hover:text-[#D4A34A] ${isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
+                  }`}
               >
                 Inquiry / Demo
               </a>
@@ -266,9 +251,8 @@ export const Header: React.FC<HeaderProps> = ({
               <a
                 href="#/why-sparkle"
                 onClick={() => setIsMenuOpen(false)}
-                className={`transition-colors py-2 border-b hover:text-[#D4A34A] ${
-                  isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
-                }`}
+                className={`transition-colors py-2 border-b hover:text-[#D4A34A] ${isDarkNavbar ? "text-zinc-300 border-zinc-900" : "text-zinc-700 border-zinc-150"
+                  }`}
               >
                 Why Sparkle
               </a>
@@ -277,9 +261,8 @@ export const Header: React.FC<HeaderProps> = ({
               <a
                 href="#/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className={`transition-colors py-2 hover:text-[#D4A34A] ${
-                  isDarkNavbar ? "text-zinc-300" : "text-zinc-700"
-                }`}
+                className={`transition-colors py-2 hover:text-[#D4A34A] ${isDarkNavbar ? "text-zinc-300" : "text-zinc-700"
+                  }`}
               >
                 Contact Us
               </a>

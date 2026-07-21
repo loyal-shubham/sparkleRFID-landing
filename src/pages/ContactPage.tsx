@@ -11,7 +11,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ theme = "dark" }) => {
   const isDark = theme === "dark";
 
   return (
-    <div className="pt-24 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
+    <div className="pt-28 pb-20 min-h-screen relative overflow-hidden transition-colors duration-300">
       <SEO 
         title="Sparkle RFID | Contact Executive Showroom Desk" 
         description="Get in touch with Sparkle's technical support desk. View maps of our Fifth Avenue headquarters or submit custom solutions quotes."
@@ -24,7 +24,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ theme = "dark" }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-[10px] font-mono text-[#D4A34A] uppercase tracking-widest font-black block">SECURED CHANNELS</span>
+          <span className="text-[10px] font-display text-[#D4A34A] uppercase tracking-widest font-black block">SECURED CHANNELS</span>
           <h1 className={`text-4xl sm:text-5xl font-display font-black tracking-wide uppercase ${isDark ? "text-white" : "text-zinc-950"}`}>
             Contact Us
           </h1>
